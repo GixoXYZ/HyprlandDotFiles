@@ -1,0 +1,68 @@
+[global]
+    monitor = 1
+    width =  (150,600)
+    origin = top-right
+    offset = 6x5
+    notification_limit = 0
+    progress_bar = true
+    progress_bar_height = 12
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    word_wrap = true
+    indicate_hidden = yes
+    transparency = 0
+    separator_height = 5
+    padding = 10
+    horizontal_padding = 20
+    text_icon_padding = 0
+    frame_width = 0
+    frame_color = "#0f0f14"
+    separator_color = frame
+    sort = yes
+    font = Ubuntu 11
+    line_height = 4
+    markup = full
+    alignment = center
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    stack_duplicates = true
+    hide_duplicate_count = false
+    icon_position = left
+    ignore_newline = no
+    show_indicators = no
+    max_icon_size = 48
+    sticky_history = yes
+    history_length = 6
+    browser = /usr/bin/firefox -new-tab
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    corner_radius = 20
+    ignore_dbusclose = false
+    force_xwayland = false
+    force_xinerama = false
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = true
+
+[urgency_low]
+    background = "#000000"
+    foreground = "#888888"
+    timeout = 5
+
+[urgency_normal]
+    background = "#000000"
+    foreground = "#dddddd"
+    timeout = 5
+
+[urgency_critical]
+    background = "#000000"
+    foreground = "#ff8888"
+    timeout = 0
+
+# vim: ft=cfg
