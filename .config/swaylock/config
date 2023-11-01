@@ -1,0 +1,26 @@
+ignore-empty-password
+font="Ubuntu"
+
+clock
+timestr=%R
+datestr=
+
+# Add current screenshot as wallpaper
+screenshots
+
+# Fade in time
+fade-in=1
+
+# Effect for background
+effect-blur=20x6
+effect-greyscale
+#effect-pixelate=5
+
+# Show/Hide indicator circle
+# indicator
+
+# smaller indicator
+indicator-radius=100
+indicator-thickness=50
+indicator-caps-lock
+

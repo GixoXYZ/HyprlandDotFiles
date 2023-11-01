@@ -1,0 +1,11 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry
+
+[KDE]
+ShowDeleteCommand=true
+
+[PreviewSettings]
+MaximumRemoteSize=0
+
+[General]
+TerminalApplication=kitty
