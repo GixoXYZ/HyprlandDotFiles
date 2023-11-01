@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Block middle click paste
+# xmousepasteblock &
+
+# Delayed startups
+sleep 10
+
+/usr/bin/viper-gui --tray --startviper &
+nekoray &
+megasync &
+telegram-desktop &
+discord &
+crow &
