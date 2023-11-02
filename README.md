@@ -354,3 +354,17 @@ sudo touch /etc/modules-load.d/i2c.conf
 sudo sh -c 'echo "i2c-dev" >> /etc/modules-load.d/i2c.conf'
 sudo reboot
 ```
+
+### Heroic Game Launcher not opening:
+
+```
+sudo nano /usr/share/dbus-1/services/org.freedesktop.Notifications.service
+```
+
+Add the following content:
+
+```
+[D-BUS Service]
+Name=org.freedesktop.Notifications
+Exec=/usr/lib/notification-daemon-1.0/notification-daemon
+```
