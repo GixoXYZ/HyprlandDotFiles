@@ -148,7 +148,7 @@ border-bottom-right-radius: 0;
 }
 #custom-power-menu {
     color: @color11;
-    font-size: 18px;
+    font-size: 14px;
     margin-right: 4px;
 }
 @keyframes blink {
