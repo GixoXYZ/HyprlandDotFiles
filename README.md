@@ -2,9 +2,9 @@
 
 Here are my configuration files for this rice. This rice relies heavily on [Pywal](https://github.com/dylanaraps/pywal). Colors change as you change your wallpaper!
 
-These dot files are provided are meant for **Nvidia GPUs** with no guarantee, use them at your own risk.
+These dot files are meant for **Nvidia GPUs** with no guarantee, use them at your own risk.
 
-**There's a delayed unmount and poweroff script included in shutdown script meant for USB hard drives. You might want to delete it by removing `~/.config/rofi/scripts/usb-sleep` in line 60 of `powermenu` file under rofi scripts directory.**
+**There's a delayed unmount and poweroff script included in shutdown script, meant for USB hard drives. You might want to delete it by removing `~/.config/rofi/scripts/usb-sleep` in line 60 of `powermenu` file under rofi scripts directory.**
 
 ## Credits
 
