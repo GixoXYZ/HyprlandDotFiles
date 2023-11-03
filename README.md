@@ -82,43 +82,43 @@ Before using dot files, make sure to at least have the necessary packages instal
 **Base packages:**
 
 ```
-sudo paru -S --needed hyprland-nvidia-git wayland xorg-xwayland qt5-wayland qt6-wayland grim gvfs gvfs-mtp jq pamixer xfce-polkit pavucontrol pipewire-alsa playerctl slurp swappy swayidle sway-audio-idle-inhibit-git swaylock-effects waybar wget wl-clipboard cliphist rofi rofi-emoji xdg-user-dirs libdrm pixman libxkbcommon python python-requests python-pillow python-pywalfox libxml2 llvm libpng gegl mtdev swww wlroots inetutils clinfo update-grub xorg-xhost lshw btop wlsunset speech-dispatcher python-pip inotify-tools mako-git gnome-keyring imagemagick wtype alsa-firmware tumbler dunst xdg-desktop-portal xdg-desktop-portal-gtk ly
+paru -S --needed hyprland-nvidia-git wayland xorg-xwayland qt5-wayland qt6-wayland grim gvfs gvfs-mtp jq pamixer xfce-polkit pavucontrol pipewire-alsa playerctl slurp swappy swayidle sway-audio-idle-inhibit-git swaylock-effects waybar wget wl-clipboard cliphist rofi rofi-emoji xdg-user-dirs libdrm pixman libxkbcommon python python-requests python-pillow python-pywalfox libxml2 llvm libpng gegl mtdev swww wlroots inetutils clinfo update-grub xorg-xhost lshw btop wlsunset speech-dispatcher python-pip inotify-tools mako-git gnome-keyring imagemagick wtype alsa-firmware tumbler dunst xdg-desktop-portal xdg-desktop-portal-gtk ly
 ```
 
 **Terminal, browser and file manager:**
 
 ```
-sudo paru -S kitty firefox dolphin dolphin-plugins
+paru -S kitty firefox dolphin dolphin-plugins
 ```
 
 Laptop brightness control:**
 
 ```
-sudo paru -S brightnessctl
+paru -S brightnessctl
 ```
 
 **Desktop monitor brightness control:**
 
 ```
-sudo paru -S ddcutil
+paru -S ddcutil
 ```
 
 **Bluetooth:**
 
 ```
-sudo paru -S blueberry bluez bluez-utils
+paru -S blueberry bluez bluez-utils
 ```
 
 **Theming:**
 
 ```
-sudo paru -S papirus-icon-theme papirus-folders nwg-look-bin kvantum qt5ct
+paru -S papirus-icon-theme papirus-folders nwg-look-bin kvantum qt5ct
 ```
 
 **Fonts:**
 
 ```
-sudo paru -S ttf-ubuntu-font-family noto-fonts-emoji ttf-fira-code otf-font-awesome otf-font-awesome-4 ttf-droid ttf-fantasque-sans-mono ttf-jetbrains-mono ttf-jetbrains-mono-nerd inter-font-beta adobe-source-code-pro-fonts vazirmatn-fonts
+paru -S ttf-ubuntu-font-family noto-fonts-emoji ttf-fira-code otf-font-awesome otf-font-awesome-4 ttf-droid ttf-fantasque-sans-mono ttf-jetbrains-mono ttf-jetbrains-mono-nerd inter-font-beta adobe-source-code-pro-fonts vazirmatn-fonts
 ```
 
 ### Extra packages
@@ -128,67 +128,67 @@ Here are a collection of useful extra packages you might want to install:
 **Package management:**
 
 ```
-sudo paru -S flatpak bauh
+paru -S flatpak bauh
 ```
 
 **Utilities:**
 
 ```
-sudo paru -S file-roller gparted tmux simple-scan qdirstat nvtop
+paru -S file-roller gparted tmux simple-scan qdirstat nvtop
 ```
 
 **Internet and networking:**
 
 ```
-sudo paru -S brave-bin google-chrome chromium telegram-desktop gufw filezilla
+paru -S brave-bin google-chrome chromium telegram-desktop gufw filezilla
 ```
 
 **Spell check:**
 
 ```
-sudo paru -S enchant ispell hunspell hunspell-en_us
+paru -S enchant ispell hunspell hunspell-en_us
 ```
 
 **Codecs:**
 
 ```
-sudo paru -S ffmpeg ffmpegthumbs jasper lame libdca libdv gst-libav libtheora libvorbis libxv wavpack x264 x265 dav1d rav1e xvidcore dvd+rw-tools dvdauthor dvgrab libmad libmpeg2 libdvdcss libdvdread libdvdnav exfat-utils fuse-exfat a52dec faac faad2 flac
+paru -S ffmpeg ffmpegthumbs jasper lame libdca libdv gst-libav libtheora libvorbis libxv wavpack x264 x265 dav1d rav1e xvidcore dvd+rw-tools dvdauthor dvgrab libmad libmpeg2 libdvdcss libdvdread libdvdnav exfat-utils fuse-exfat a52dec faac faad2 flac
 ```
 
 **File systems:**
 
 ```
-sudo paru -S ntfs-3g ntfsprogs udf udftools dosfstools exfatprogs f2fs-tools hfsprogs reiser4progs
+paru -S ntfs-3g ntfsprogs udf udftools dosfstools exfatprogs f2fs-tools hfsprogs reiser4progs
 ```
 
 **Media:**
 
 ```
-sudo paru -S vlc mpv smplayer smplayer-themes ristretto spotify spicetify-cli
+paru -S vlc mpv smplayer smplayer-themes ristretto spotify spicetify-cli
 ```
 
 **Productivity:**
 
 ```
-sudo paru -S libreoffice audacity gimp krita inkscape blender
+paru -S libreoffice audacity gimp krita inkscape blender
 ```
 
 **Development:**
 
 ```
-sudo paru -S neovim dotnet-sdk visual-studio-code-bin github-cli repo
+paru -S neovim dotnet-sdk visual-studio-code-bin github-cli repo
 ```
 
 **OBS:**
 
 ```
-sudo paru -S obs-studio wlrobs wlrobs-hg gstreamer-vaapi obs-vaapi
+paru -S obs-studio wlrobs wlrobs-hg gstreamer-vaapi obs-vaapi
 ```
 
 **Gaming:**
 
 ```
-sudo paru -S steam heroic-games-launcher-bin lutris mangohud goverlay-bin
+paru -S steam heroic-games-launcher-bin lutris mangohud goverlay-bin
 ```
 
 Lutris dependencies:
@@ -206,7 +206,7 @@ sudo pacman -S --needed nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-setti
 **TUI:**
 
 ```
-sudo paru -S ranger mc cava cmatrix tty-clock pipes.sh screenfetch tetris-terminal-git fzf ytfzf
+paru -S ranger mc cava cmatrix tty-clock pipes.sh screenfetch tetris-terminal-git fzf ytfzf
 ```
 
 **Flatpak packages:**
