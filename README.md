@@ -121,6 +121,10 @@ paru -S papirus-icon-theme papirus-folders nwg-look-bin kvantum qt5ct
 paru -S ttf-ubuntu-font-family noto-fonts-emoji ttf-fira-code otf-font-awesome otf-font-awesome-4 ttf-droid ttf-fantasque-sans-mono ttf-jetbrains-mono ttf-jetbrains-mono-nerd inter-font-beta adobe-source-code-pro-fonts vazirmatn-fonts
 ```
 
+[Vazir Code Fonts](https://github.com/rastikerdar/vazir-code-font)
+
+[Vazirmatn Fonts](https://github.com/rastikerdar/vazirmatn)
+
 ### Extra packages
 
 Here are a collection of useful extra packages you might want to install:
