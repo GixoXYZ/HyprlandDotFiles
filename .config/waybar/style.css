@@ -4,15 +4,18 @@
     font-family: Ubuntu;
     font-size: 14px;
 }
+
 window#waybar {
     background-color: rgba(0, 0, 0, 0);
     color: @foreground;
     transition-property: background-color;
     transition-duration: 0.5s;
 }
+
 window#waybar.hidden {
     opacity: 0.1;
 }
+
 #window,
 #network,
 #hyprland-language,
@@ -46,6 +49,7 @@ window#waybar.hidden {
     border-radius: 10px;
     margin: 4px 2px 0 2px;
 }
+
 #custom-audio_idle_inhibitor,
 #custom-brightness,
 #language,
@@ -53,34 +57,41 @@ window#waybar.hidden {
 #backlight,
 #battery,
 #memory {
-margin-right: 0;
-margin-left: 0;
-border-radius: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 0;
 }
+
 #taskbar,
 #pulseaudio,
 #cpu {
-margin-left: 0;
-border-top-left-radius: 0;
-border-bottom-left-radius: 0;
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
+
 #custom-launcher,
 #network,
 #disk {
-margin-right: 0;
-border-top-right-radius: 0;
-border-bottom-right-radius: 0;
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
+
 #custom-launcher {
     color: @color9;
     font-size: 28px;
+    font-family: FontAwesome;
     padding: 0 0 0 10px;
 }
-#taskbar button{
+
+#taskbar button {
     box-shadow: inset 0 -3px transparent;
     padding: 4px;
-    transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);;
+    transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+    ;
 }
+
 #taskbar button.active {
     background-color: @color9;
     color: @color9;
@@ -88,84 +99,101 @@ border-bottom-right-radius: 0;
     padding-right: 10px;
     transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
+
 #custom-usb,
 #battery {
     color: @color9;
 }
+
 #custom-spotify,
 #cpu {
     color: @color10;
 }
+
 #bluetooth,
 #disk {
     color: @color12;
 }
+
 #workspaces button {
     color: @color11;
     box-shadow: inset 0 -3px transparent;
     padding: 2px;
     transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
+
 #workspaces button.active {
     color: @color9;
     padding-left: 10px;
     padding-right: 10px;
     transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
-#tray > .passive {
+
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
-#tray > .needs-attention {
+
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }
+
 #custom-wallpaper,
 #custom-brightness,
 #language {
     color: @color14;
 }
+
 #backlight,
 #pulseaudio,
 #network {
     color: @color13;
 }
+
 #custom-audio_idle_inhibitor,
 #memory,
 #pulseaudio.muted,
 #network.disconnected {
     color: @color11;
 }
+
 #battery.critical,
 #battery.warning,
 #battery.full,
 #battery.plugged {
     color: @color15;
 }
+
 #clock {
     color: @color12;
     font-weight: bold;
     margin-left: 4px;
 }
+
 #custom-power-menu {
     color: @color11;
     font-size: 14px;
     margin-right: 4px;
 }
+
 @keyframes blink {
     to {
         background-color: rgba(30, 34, 42, 0.5);
         color: #abb2bf;
     }
 }
+
 tooltip {
     border-radius: 10px;
     padding: 15px;
     background-color: @background;
     font-family: CartographCF Nerd Font;
 }
+
 tooltip label {
     padding: 5px;
 }
+
 label:focus {
     background-color: @background;
 }
