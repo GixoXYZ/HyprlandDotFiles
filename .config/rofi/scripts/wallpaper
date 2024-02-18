@@ -28,11 +28,11 @@ fi
 
 sleep 1
 
-swaybg -i ${DIR}/${RANDOMPICS}
-wal -i ${DIR}/${RANDOMPICS} --cols16
+swaybg -i $wallpapers/$image
+wal -i $wallpapers/$image --cols16
 pywalfox update
 
-echo "${DIR}/${RANDOMPICS}" >"$ACTIVE_WALLPAPER_PATH"
+echo "$wallpapers/$image" >"$ACTIVE_WALLPAPER_PATH"
 . $HOME/.config/mako/update-colors.sh
 . $HOME/.config/mako/update-theme.sh
 . $HOME/.config/spicetify/Themes/Pywal/update-colors.sh
