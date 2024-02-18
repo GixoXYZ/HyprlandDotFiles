@@ -2,23 +2,23 @@
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 
-DIR=$HOME/Wallpapers
+DIR=$HOME/Pictures/Wallpapers
+ACTIVE_WALLPAPER_PATH="$HOME/.cache/active-wallpaper-path"
 PICS=($(ls ${DIR}))
 
 RANDOMPICS=${PICS[$RANDOM % ${#PICS[@]}]}
 
-if [[ $(pidof swww) ]]; then
-  pkill swww
+if [[ $(pidof swaybg) ]]; then
+  pkill swaybg
 fi
 
-# swww init
-swww img ${DIR}/${RANDOMPICS} --transition-type wipe --transition-fps 60 --transition-duration 0.3 --transition-angle 30 --transition-step 90
-sleep 0.3
+sleep 1
+
+swaybg -i ${DIR}/${RANDOMPICS}
 wal -i ${DIR}/${RANDOMPICS} --cols16
 pywalfox update
-pywal-discord -t default
-wal-telegram --wal
 
+echo "${DIR}/${RANDOMPICS}" >"$ACTIVE_WALLPAPER_PATH"
 . $HOME/.config/mako/update-colors.sh
 . $HOME/.config/spicetify/Themes/Pywal/update-colors.sh
 . $HOME/.config/cava/scripts/update-colors.sh

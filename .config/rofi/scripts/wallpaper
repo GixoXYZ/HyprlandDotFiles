@@ -4,8 +4,9 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 
 dir="$HOME/.config/rofi/launchers/type-1"
 theme='style-1'
+ACTIVE_WALLPAPER_PATH="$HOME/.cache/active-wallpaper-path"
 
-wallpapers=$HOME/Wallpapers
+wallpapers=$HOME/Pictures/Wallpapers
 image="$(ls $wallpapers | rofi -dmenu -i -p "Select wallpaper" -theme ${dir}/${theme}.rasi)"
 wallpaper=$wallpapers/$image
 
@@ -21,14 +22,17 @@ else
     exit 1
 fi
 
-swww img $wallpaper --transition-type wipe --transition-fps 60 --transition-duration 0.5 --transition-angle 30 --transition-step 90
-sleep 0.5
+if [[ $(pidof swaybg) ]]; then
+    pkill swaybg
+fi
 
-wal -i $wallpaper --cols16
+sleep 1
+
+swaybg -i ${DIR}/${RANDOMPICS}
+wal -i ${DIR}/${RANDOMPICS} --cols16
 pywalfox update
-pywal-discord -t default
-wal-telegram --wal
 
+echo "${DIR}/${RANDOMPICS}" >"$ACTIVE_WALLPAPER_PATH"
 . $HOME/.config/mako/update-colors.sh
 . $HOME/.config/mako/update-theme.sh
 . $HOME/.config/spicetify/Themes/Pywal/update-colors.sh

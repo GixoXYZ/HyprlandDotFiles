@@ -2,28 +2,26 @@
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 
-swww init
+if [ -e "$HOME/.cache/active-wallpaper-path" ]; then
+    SAVED_PATH=$(cat "$HOME/.cache/active-wallpaper-path")
+    swaybg -i "$SAVED_PATH"
+fi
 
 if [ -e "${HOME}/.cache/wal/colors" ]; then
     wal -R --cols16
-
     echo "Cached colors exist. Using existing colors."
 else
-    DIR=$HOME/Wallpapers
+    DIR=$HOME/Pictures/Wallpapers
+    ACTIVE_WALLPAPER_PATH="$HOME/.cache/active-wallpaper-path"
     PICS=($(ls ${DIR}))
-
-    RANDOMPICS=${PICS[$RANDOM % ${#PICS[@]}]}
-
-    swww img ${DIR}/${RANDOMPICS} --transition-type wipe --transition-fps 60 --transition-duration 2 --transition-angle 30 --transition-step 90
-
-    wal -i ${DIR}/${RANDOMPICS} --cols16
-
+    RANDOM_PIC=${PICS[$RANDOM % ${#PICS[@]}]}
+    swaybg -i "${DIR}/${RANDOM_PIC}"
+    wal -i "${DIR}/${RANDOM_PIC}" --cols16
+    echo "${DIR}/${RANDOMPICS}" >"$ACTIVE_WALLPAPER_PATH"
     echo "Successfully set a new wallpaper and generated colors from it."
 fi
 
 pywalfox update
-# pywal-discord -t default
-# wal-telegram --wal
 
 . $HOME/.config/mako/update-colors.sh
 . $HOME/.config/spicetify/Themes/Pywal/update-colors.sh
