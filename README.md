@@ -37,7 +37,7 @@ A huge portion of these dot files are based on [rchrdwllm's](https://github.com/
 
 **Browser:** Firefox
 
-**File manager:** Dolphin
+**File manager:** Thunar
 
 **Login manager:** ly
 
@@ -82,13 +82,13 @@ Before using dot files, make sure to at least have the necessary packages instal
 **Base packages:**
 
 ```
-paru -S --needed hyprland-nvidia-git wayland xorg-xwayland qt5-wayland qt6-wayland grim gvfs gvfs-mtp jq pamixer xfce-polkit pavucontrol pipewire-alsa playerctl slurp swappy swayidle sway-audio-idle-inhibit-git swaylock-effects waybar wget wl-clipboard cliphist rofi rofi-emoji xdg-user-dirs libdrm pixman libxkbcommon python python-requests python-pillow python-pywalfox libxml2 llvm libpng gegl mtdev swww wlroots inetutils clinfo update-grub xorg-xhost lshw btop wlsunset speech-dispatcher python-pip inotify-tools mako-git gnome-keyring imagemagick wtype alsa-firmware tumbler dunst xdg-desktop-portal xdg-desktop-portal-gtk ly
+paru -S --needed hyprland-nvidia-git wayland xorg-xwayland qt5-wayland qt6-wayland grim gvfs gvfs-mtp jq pamixer mate-polkit pavucontrol pipewire-alsa playerctl slurp swappy swayidle sway-audio-idle-inhibit-git swaylock-effects waybar wget wl-clipboard cliphist rofi rofi-emoji xdg-user-dirs libdrm pixman libxkbcommon python python-requests python-pillow python-pywalfox libxml2 llvm libpng gegl mtdev swaybg wlroots inetutils clinfo update-grub xorg-xhost lshw btop wlsunset speech-dispatcher python-pip inotify-tools mako-git gnome-keyring imagemagick wtype alsa-firmware tumbler swaync xdg-desktop-portal xdg-desktop-portal-gtk ly
 ```
 
 **Terminal, browser and file manager:**
 
 ```
-paru -S kitty firefox dolphin dolphin-plugins
+paru -S kitty firefox thunar
 ```
 
 Laptop brightness control:**
@@ -309,18 +309,6 @@ Use this line to enable Ly:
 sudo systemctl enable ly
 ```
 
-### Dolphin's default terminal
-
-```
-nano ~/.config/kdeglobals
-```
-
-Add this at the end of the file:
-
-```
-[General]
-TerminalApplication=gnome-terminal
-```
 
 ### Fix Obsidian lagging
 
@@ -340,7 +328,7 @@ All you have to do is to add this line to your VS Code's user settings JSON file
 
 ```
 xdg-settings set default-web-browser firefox.desktop
-xdg-mime default dolphin.desktop inode/directory
+xdg-mime default thunar.desktop inode/directory
 xdg-mime default kitty.desktop application/x-shellscript
 ```
 
