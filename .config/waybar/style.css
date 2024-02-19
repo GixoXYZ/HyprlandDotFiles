@@ -20,12 +20,14 @@ window#waybar.hidden {
 #network,
 #hyprland-language,
 #pulseaudio,
+#pulseaudio.microphone,
 #taskbar,
 #clock,
 #cpu,
 #memory,
 #disk,
 #custom-brightness,
+#custom-separator,
 #language,
 #bluetooth,
 #backlight,
@@ -52,6 +54,8 @@ window#waybar.hidden {
 
 #custom-audio_idle_inhibitor,
 #custom-brightness,
+#custom-separator,
+#pulseaudio,
 #language,
 #bluetooth,
 #backlight,
@@ -63,7 +67,7 @@ window#waybar.hidden {
 }
 
 #taskbar,
-#pulseaudio,
+#pulseaudio.microphone,
 #cpu {
     margin-left: 0;
     border-top-left-radius: 0;
@@ -140,12 +144,13 @@ window#waybar.hidden {
 
 #custom-wallpaper,
 #custom-brightness,
+#pulseaudio,
 #language {
     color: @color14;
 }
 
 #backlight,
-#pulseaudio,
+#pulseaudio.microphone,
 #network {
     color: @color13;
 }
