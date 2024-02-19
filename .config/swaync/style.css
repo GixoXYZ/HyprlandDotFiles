@@ -2,17 +2,17 @@
 
 @import '../../.cache/wal/colors-waybar.css';
 
-@define-color noti-border-color rgba(0, 0, 0, 0.8);
-@define-color noti-bg rgba(0, 0, 0, 0.8);
-@define-color noti-bg-alt #111111;
+@define-color noti-border-color @background;
+@define-color noti-bg @background;
+@define-color noti-bg-alt @background;
 @define-color noti-bg-hover @color2;
 @define-color text-color @color2;
 @define-color text-color-alt @color7;
 @define-color text-color-disabled rgba(150, 150, 150, 0.8);
 
 * {
-    font-family: FiraCode;
-    font-weight: Bolder;
+    font-family: Ubuntu;
+    font-weight: Bold;
 }
 
 .control-center .notification-row:focus,
@@ -36,7 +36,7 @@
     background: @noti-bg;
     padding: 3px 10px 3px 6px;
     border-radius: 10px;
-    border: 2px solid @noti-border-color;
+    border: none;
     margin: 0px;
 }
 
@@ -65,7 +65,7 @@
 
 
 .notification-action {
-    border: 2px solid @noti-border-color;
+    border: none;
     border-top: none;
     border-radius: 10px;
 }
@@ -105,7 +105,7 @@
     background: @noti-bg;
     color: @text-color;
     caret-color: @text-color;
-    border: 1px solid @noti-border-color;
+    border: none;
     border-radius: 10px
 }
 
@@ -113,7 +113,7 @@
     font-size: 0.5rem;
     margin-left: 4px;
     background: @noti-bg;
-    border: 1px solid @noti-border-color;
+    border: none;
     border-radius: 10px;
     color: @text-color
 }
@@ -121,7 +121,7 @@
 .inline-reply-button:disabled {
     background: initial;
     color: @text-color-disabled;
-    border: 1px solid transparent
+    border: none;
 }
 
 .inline-reply-button:hover {
@@ -161,7 +161,7 @@
 
 .control-center {
     background: @noti-bg;
-    border: 2px solid @noti-border-color;
+    border: none;
     color: @text-color;
     border-radius: 10px;
 }
@@ -196,7 +196,7 @@
     color: @text-color;
     border-radius: 10px;
     background: transparent;
-    border: 0.5px solid @noti-border-color;
+    border: none;
 }
 
 .widget-title>button:hover {
@@ -221,7 +221,7 @@
 
 .widget-dnd>switch:checked {
     background: #f7768e;
-    border: 1px solid #f7768e;
+    border: none;
 }
 
 .widget-dnd>switch slider {
