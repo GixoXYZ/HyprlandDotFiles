@@ -57,7 +57,7 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			~/.config/rofi/scripts/usb-sleep
+			~/.config/rofi/scripts/usb-sleep.sh
 			systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
