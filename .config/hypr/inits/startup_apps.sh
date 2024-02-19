@@ -6,9 +6,8 @@
 # Delayed startups
 sleep 10
 
-/usr/bin/viper-gui --tray --startviper &
 nekoray &
-megasync &
+env QT_QPA_PLATFORM=xcb megasync &
 telegram-desktop &
 discord &
 crow &

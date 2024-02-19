@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 if [ -f "/usr/bin/swayidle" ]; then
     echo "swayidle is installed."

@@ -1,4 +1,5 @@
-#!/usr/bin/bash
+#!/bin/bash
+
 source "$HOME/.cache/wal/colors.sh"
 
 swaylock \

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-iDIR="$HOME/.config/dunst/imgs"
+iDIR="$HOME/.config/swaync/icons"
 
 time=$(date +%Y-%m-%d-%H-%M-%S)
 dir="$(xdg-user-dir PICTURES)/Screenshots"

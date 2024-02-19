@@ -1,7 +1,9 @@
 #!/bin/bash
 
-## Set GTK Themes, Icons, Cursor and Fonts
+# Fix running gtk apps on root
+exec-once = xhost +SI:localuser:root
 
+## Set GTK Themes, Icons, Cursor and Fonts
 THEME='Arc-BLACKEST'
 ICONS='Papirus-Dark'
 FONT='Ubuntu Semi-Bold 11'
