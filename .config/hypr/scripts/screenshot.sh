@@ -28,7 +28,18 @@ countdown() {
 
 # take shots
 shotnow() {
-	cd ${dir} && grim - | tee "$file" | wl-copy
+	active_workspace_monitor=$(hyprctl -j activeworkspace | jq -r '(.monitor)')
+	screenshot_filename="$HOME/Pictures/screenshots/$(date +"%d-%m-%Y-%H%S")-$active_workspace_monitor.png"
+
+	cd ${dir} && grim -o $active_workspace_monitor - | tee "$file" | wl-copy
+	notify_view
+}
+
+shotmonitor() {
+	active_workspace_monitor=$(hyprctl -j activeworkspace | jq -r '(.monitor)')
+	screenshot_filename="$HOME/Pictures/screenshots/$(date +"%d-%m-%Y-%H%S")-$active_workspace_monitor.png"
+
+	cd ${dir} && grim -o $active_workspace_monitor - | tee "$file" | wl-copy
 	notify_view
 }
 
@@ -62,6 +73,8 @@ fi
 
 if [[ "$1" == "--now" ]]; then
 	shotnow
+elif [[ "$1" == "--monitor" ]]; then
+	shotmonitor
 elif [[ "$1" == "--in5" ]]; then
 	shot5
 elif [[ "$1" == "--in10" ]]; then
