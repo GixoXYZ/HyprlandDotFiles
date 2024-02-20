@@ -30,7 +30,7 @@ wait
 touch "$HOME/.wal_lock"
 
 # wal command runs after swww is finished
-wal -i "${DIR}/${RANDOMPICS}" --cols16
+wal -i "${DIR}/${RANDOMPICS}"
 
 wait
 

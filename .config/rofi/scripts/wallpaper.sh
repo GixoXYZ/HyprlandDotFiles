@@ -44,8 +44,7 @@ wait
 touch "$HOME/.wal_lock"
 
 # wal command runs after swww is finished
-wal -i $wallpaper --cols16
-
+wal -i $wallpaper
 wait
 
 # Remove the lock file to indicate that wal -i has finished
