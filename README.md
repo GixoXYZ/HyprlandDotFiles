@@ -497,13 +497,13 @@ Description=Run Mimic 3 web server
 Documentation=https://github.com/MycroftAI/mimic3
 
 [Service]
-ExecStart=mimic3-server
+ExecStart=/path/to/mimic3-server
 
 [Install]
 WantedBy=default.target
 ```
 
-Make sure to change `/path/to/mimic3-server` to wherever you installed Mimic 3. Specially on Archlinux install: `/home/gixo/.local/bin/mimic3`
+Make sure to change `/path/to/mimic3-server` to wherever you installed Mimic 3.
 
 You can find the location of it by running `which mimic3` command.
 
