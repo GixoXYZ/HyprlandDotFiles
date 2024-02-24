@@ -51,25 +51,16 @@ A huge portion of these dot files are based on [rchrdwllm's](https://github.com/
 
 ![](Screenshots/blue1.png)
 ![](Screenshots/blue2.png)
-![](Screenshots/blue3.png)
-![](Screenshots/blue4.png)
-![](Screenshots/blue5.png)
 
 ### Wallpaper Test 2
 
 ![](Screenshots/green1.png)
 ![](Screenshots/green2.png)
-![](Screenshots/green3.png)
-![](Screenshots/green4.png)
-![](Screenshots/green5.png)
 
 ### Wallpaper Test 3
 
 ![](Screenshots/red1.png)
 ![](Screenshots/red2.png)
-![](Screenshots/red3.png)
-![](Screenshots/red4.png)
-![](Screenshots/red5.png)
 
 # Installation
 
