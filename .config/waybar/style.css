@@ -1,7 +1,7 @@
 @import 'colors-waybar.css';
 
 * {
-    font-family: Ubuntu;
+    font-family: FontAwesome;
     font-size: 14px;
 }
 
@@ -44,6 +44,8 @@ window#waybar.hidden {
 #custom-wallpaper,
 #custom-launcher,
 #custom-spotify,
+#custom-swaync,
+#custom-hyprshade,
 #custom-audio_idle_inhibitor {
     color: @foreground;
     padding: 0px 10px 0px 10px;
@@ -60,12 +62,14 @@ window#waybar.hidden {
 #bluetooth,
 #backlight,
 #battery,
+#custom-hyprshade,
 #memory {
     margin-right: 0;
     margin-left: 0;
     border-radius: 0;
 }
 
+#idle_inhibitor,
 #taskbar,
 #pulseaudio.microphone,
 #cpu {
@@ -74,6 +78,7 @@ window#waybar.hidden {
     border-bottom-left-radius: 0;
 }
 
+#custom-swaync,
 #custom-launcher,
 #network,
 #disk {
@@ -85,7 +90,6 @@ window#waybar.hidden {
 #custom-launcher {
     color: @color9;
     font-size: 28px;
-    font-family: FontAwesome;
     padding: 0 0 0 10px;
 }
 
@@ -104,17 +108,20 @@ window#waybar.hidden {
     transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
 
+#idle_inhibitor,
 #custom-usb,
 #battery {
     color: @color9;
 }
 
 #custom-spotify,
+#custom-swaync,
 #cpu {
     color: @color10;
 }
 
 #bluetooth,
+#language,
 #disk {
     color: @color12;
 }
@@ -144,8 +151,8 @@ window#waybar.hidden {
 
 #custom-wallpaper,
 #custom-brightness,
-#pulseaudio,
-#language {
+#custom-hyprshade,
+#pulseaudio {
     color: @color14;
 }
 
@@ -192,7 +199,7 @@ tooltip {
     border-radius: 10px;
     padding: 15px;
     background-color: @background;
-    font-family: CartographCF Nerd Font;
+    font-family: Ubuntu;
 }
 
 tooltip label {

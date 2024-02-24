@@ -3,10 +3,11 @@
     "layer": "top",
     "modules-left": [
         "clock",
+        "custom/swaync",
+        "custom/audio_idle_inhibitor",
+        "idle_inhibitor",
         "hyprland/workspaces",
         "tray",
-        "custom/spotify",
-        "mpris",
         "custom/wallpaper"
     ],
     "modules-center": [
@@ -21,6 +22,7 @@
         "network",
         "hyprland/language",
         "custom/brightness",
+        "custom/hyprshade",
         "pulseaudio",
         "pulseaudio#microphone",
         "custom/power-menu"
@@ -233,7 +235,7 @@
         "on-click-right": "kitty nmtui",
         "format": "{}",
         "format-alt-click": "click",
-        "format-alt": " {ifname}  🖳{ipaddr}/{cidr}  🖧{gwaddr} {essid}",
+        "format-alt": "  {ifname} | {ipaddr}/{cidr} | {gwaddr} {essid}",
         "format-disconnected": "Disconnected",
         "format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
         "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} 󰈁"
@@ -249,6 +251,13 @@
         "status-icons": {
             "paused": "",
             "playing": ""
+        }
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
         }
     },
     "custom/power-menu": {
@@ -283,6 +292,7 @@
     },
     "custom/usb": {
         "format": "⏏",
+        "tooltip": false,
         "on-click": "~/.config/rofi/scripts/eject-usb.sh"
     },
     "custom/audio_idle_inhibitor": {
@@ -296,5 +306,30 @@
             "output-input": "  ",
             "none": ""
         }
+    },
+    "custom/swaync": {
+        "tooltip": true,
+        "format": "{icon} {}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/hyprshade": {
+        "format": "",
+        "on-click": "hyprshade toggle",
+        "tooltip": false
     }
 }
