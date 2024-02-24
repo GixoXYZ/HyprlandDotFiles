@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Current Theme
-dir="$HOME/.config/rofi/powermenu/type-1"
-theme='style-1'
+theme="$HOME/.config/rofi/styles/powermenu.rasi"
+
 
 # List USB devices using lsblk
 USB_DEVICES=$(lsblk -npo NAME,TYPE,TRAN,LABEL,SIZE | awk '$3=="usb" {print $1,$4,$5}' | sed 's/ / - /')
 
 # Check if USB_DEVICES is empty
 if [ -z "$USB_DEVICES" ]; then
-    SELECTED_DEVICE=$(echo "No USB disk is connected" | rofi -dmenu -p "No USB disk is connected" -theme ${dir}/${theme}.rasi)
+    SELECTED_DEVICE=$(echo "No USB disk is connected" | rofi -dmenu -p "No USB disk is connected" -theme ${theme})
 else
     # Create a Rofi menu
-    SELECTED_DEVICE=$(echo "$USB_DEVICES" | rofi -dmenu -p "Select a USB device to safely remove:" -theme ${dir}/${theme}.rasi)
+    SELECTED_DEVICE=$(echo "$USB_DEVICES" | rofi -dmenu -p "Select a USB device to safely remove:" -theme ${theme})
 
     # Extract the selected device name
     SELECTED_DEVICE_NAME=$(echo "$SELECTED_DEVICE" | cut -d' ' -f1)
