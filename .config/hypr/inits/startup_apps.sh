@@ -7,7 +7,7 @@
 sleep 10
 
 nekoray &
-env QT_QPA_PLATFORM=xcb megasync &
+megasync &
 telegram-desktop &
-discord &
-crow &
+flatpak run com.discordapp.Discord &
+mimic3-server &
