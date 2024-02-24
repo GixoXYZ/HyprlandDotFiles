@@ -23,6 +23,17 @@
 	<directories/>
 </action>
 <action>
+	<icon>preferences-desktop-wallpaper</icon>
+	<name>Set swww Wallpaper</name>
+	<submenu></submenu>
+	<unique-id>1708547426325782-1</unique-id>
+	<command>~/.config/Thunar/scripts/wallpaper.sh %f &amp;</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
 	<submenu></submenu>
@@ -76,6 +87,39 @@
 	<description>Check md5sum</description>
 	<range></range>
 	<patterns>*.iso;*.ISO;*.tar.gz;*.TAR.GZ;*.zip;*.ZIP</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>gtk-convert</icon>
+	<name>Convert Video: x264 .mp4</name>
+	<submenu></submenu>
+	<unique-id>1708549565848944-1</unique-id>
+	<command>ffmpeg -i %n -c:v libx264 %n.mp4</command>
+	<description></description>
+	<range>1</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>gtk-convert</icon>
+	<name>Convert PDF: .png</name>
+	<submenu></submenu>
+	<unique-id>1708633073135188-1</unique-id>
+	<command>pdfimages -png %f %f</command>
+	<description></description>
+	<range>1</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>gtk-convert</icon>
+	<name>Compress PDF</name>
+	<submenu></submenu>
+	<unique-id>1708633290220075-2</unique-id>
+	<command>gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=%f_compressed.pdf %f</command>
+	<description></description>
+	<range>1</range>
+	<patterns>*.pdf</patterns>
 	<other-files/>
 </action>
 </actions>
