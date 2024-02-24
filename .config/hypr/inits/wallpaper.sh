@@ -19,7 +19,11 @@ else
     wait
 
     wal -i ${DIR}/${RANDOMPICS}
-
+    wait
+    killall swaync
+    wait
+    swaync
+    
     echo "Successfully set a new wallpaper and generated colors from it."
 fi
 
