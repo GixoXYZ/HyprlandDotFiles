@@ -1,12 +1,13 @@
 {
-    "height": 40,
+    "height": 42,
     "layer": "top",
     "modules-left": [
         "clock",
+        "custom/swaync",
+        "custom/audio_idle_inhibitor",
+        "idle_inhibitor",
         "hyprland/workspaces",
         "tray",
-        "custom/spotify",
-        "mpris",
         "custom/wallpaper"
     ],
     "modules-center": [
@@ -21,9 +22,41 @@
         "network",
         "hyprland/language",
         "custom/brightness",
+        "custom/hyprshade",
         "pulseaudio",
+        "pulseaudio#microphone",
         "custom/power-menu"
     ],
+    "custom/separator#dot": {
+        "format": "",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/separator#dot-line": {
+        "format": "",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/separator#line": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/separator#blank": {
+        "format": "",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/separator#blank_2": {
+        "format": "  ",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/separator#blank_3": {
+        "format": "   ",
+        "interval": "once",
+        "tooltip": false
+    },
     "hyprland/workspaces": {
         "format": "{icon} {name}",
         "on-click": "activate",
@@ -111,10 +144,17 @@
         "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --inc",
         "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec"
     },
+    "group/audio": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "pulseaudio#microphone",
+        ]
+    },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "Muted",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} 󰂰 {volume}%",
+        "format-muted": "󰖁",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -123,24 +163,33 @@
             "portable": "",
             "car": "",
             "default": [
-                "▁",
-                "▂",
-                "▃",
-                "▄",
-                "▅",
-                "▆",
-                "▇",
-                "█"
+                "",
+                "",
+                "󰕾",
+                ""
             ],
             "ignored-sinks": [
                 "Easy Effects Sink"
-            ]
+            ],
         },
-        "on-click-right": "pavucontrol &",
-        "on-click": "pamixer -t",
+        "scroll-step": 5.0,
+        "on-click": "~/.config/hypr/scripts/volume.sh --toggle",
+        "on-click-right": "pavucontrol -t 3",
+        "on-scroll-up": "~/.config/hypr/scripts/volume.sh --inc",
+        "on-scroll-down": "~/.config/hypr/scripts/volume.sh --dec",
+        "tooltip-format": "{icon} {desc} | {volume}%",
+        "smooth-scrolling-threshold": 1,
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "on-click": "~/.config/hypr/scripts/volume.sh --toggle-mic",
+        "on-click-right": "pavucontrol -t 4",
+        "on-scroll-up": "~/.config/hypr/scripts/volume.sh --mic-inc",
+        "on-scroll-down": "~/.config/hypr/scripts/volume.sh --mic-dec",
+        "tooltip-format": "{source_desc} | {source_volume}%",
         "scroll-step": 5,
-        "on-scroll-up": "~/.config/waybar/scripts/volume.sh --inc",
-        "on-scroll-down": "~/.config/waybar/scripts/volume.sh --dec"
     },
     "battery": {
         "interval": 60,
@@ -186,7 +235,7 @@
         "on-click-right": "kitty nmtui",
         "format": "{}",
         "format-alt-click": "click",
-        "format-alt": " {ifname}  🖳{ipaddr}/{cidr}  🖧{gwaddr} {essid}",
+        "format-alt": "  {ifname} | {ipaddr}/{cidr} | {gwaddr} {essid}",
         "format-disconnected": "Disconnected",
         "format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
         "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} 󰈁"
@@ -204,17 +253,24 @@
             "playing": ""
         }
     },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
     "custom/power-menu": {
         "format": " ⏻ ",
-        "on-click": "~/.config/rofi/scripts/powermenu"
+        "on-click": "~/.config/rofi/scripts/powermenu.sh"
     },
     "custom/launcher": {
         "format": "",
-        "on-click": "~/.config/rofi/scripts/launcher"
+        "on-click": "~/.config/rofi/scripts/launcher.sh"
     },
     "custom/wallpaper": {
         "format": "",
-        "on-click": "~/.config/rofi/scripts/wallpaper",
+        "on-click": "~/.config/rofi/scripts/wallpaper.sh",
         "on-click-right": "~/.config/waybar/scripts/wallpaper.sh"
     },
     "custom/spotify": {
@@ -236,7 +292,8 @@
     },
     "custom/usb": {
         "format": "⏏",
-        "on-click": "~/.config/rofi/scripts/eject-usb"
+        "tooltip": false,
+        "on-click": "~/.config/rofi/scripts/eject-usb.sh"
     },
     "custom/audio_idle_inhibitor": {
         "format": "{icon}",
@@ -249,5 +306,30 @@
             "output-input": "  ",
             "none": ""
         }
+    },
+    "custom/swaync": {
+        "tooltip": true,
+        "format": "{icon} {}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/hyprshade": {
+        "format": "",
+        "on-click": "hyprshade toggle",
+        "tooltip": false
     }
 }

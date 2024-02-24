@@ -6,7 +6,7 @@ timestr=%R
 datestr=
 
 # Add current screenshot as wallpaper
-screenshots
+#screenshots
 
 # Fade in time
 fade-in=1
