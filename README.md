@@ -73,7 +73,7 @@ Before using dot files, make sure to at least have the necessary packages instal
 **Base packages:**
 
 ```
-yay -S --needed hyprland-nvidia-git wayland xorg xorg-server xorg-xrdb xorg-xwayland qt5-wayland qt6-wayland grim gvfs gvfs-mtp jq pamixer polkit-gnome pavucontrol pipewire-alsa playerctl slurp swappy swayidle sway-audio-idle-inhibit-git swaylock-effects waybar wget wl-clipboard cliphist curl rofi rofi-emoji xdg-user-dirs libdrm pixman libxkbcommon python python-requests python-pillow python-pywal python-pywalfox libxml2 llvm libpng gegl mtdev swww wlroots inetutils clinfo update-grub xorg-xhost lshw wlsunset speech-dispatcher python-pip inotify-tools mako-git gnome-keyring imagemagick wtype alsa-firmware tumbler swaync xdg-desktop-portal xdg-desktop-portal-hyprland ly xdg-utils yad pacman-contrib python-pipx hyprpicker-git hyprshade ghostscript poppler
+yay -S --needed hyprland-nvidia-git wayland xorg xorg-server xorg-xrdb xorg-xwayland qt5-wayland qt6-wayland grim gvfs gvfs-mtp jq pamixer polkit-gnome pavucontrol pipewire-alsa playerctl slurp swappy swayidle sway-audio-idle-inhibit-git swaylock-effects waybar wget wl-clipboard cliphist curl rofi rofi-emoji xdg-user-dirs libdrm pixman libxkbcommon python python-requests python-pillow python-pywal python-pywalfox libxml2 llvm libpng gegl mtdev swww wlroots inetutils clinfo update-grub xorg-xhost lshw wlsunset speech-dispatcher python-pip inotify-tools mako-git gnome-keyring imagemagick wtype alsa-firmware tumbler swaync xdg-desktop-portal xdg-desktop-portal-hyprland ly xdg-utils yad pacman-contrib python-pipx hyprpicker-git hyprshade ghostscript poppler hyprswitch
 ```
 
 **Terminal, browser and file manager:**
@@ -103,7 +103,7 @@ yay -S blueberry bluez bluez-utils
 **Theming:**
 
 ```
-yay -S papirus-icon-theme papirus-folders nwg-look-bin kvantum qt5ct qt6ct qt6-svg
+yay -S papirus-icon-theme papirus-folders nwg-look-bin kvantum-qt5 kvantum qt5ct qt6ct qt6-svg
 ```
 
 **Fonts:**
