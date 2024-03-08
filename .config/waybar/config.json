@@ -329,7 +329,7 @@
     },
     "custom/hyprshade": {
         "format": "",
-        "on-click": "hyprshade toggle",
+        "on-click": "hyprshade toggle blue-light-filter",
         "tooltip": false
     }
 }
