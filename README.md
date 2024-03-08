@@ -111,7 +111,7 @@ yay -S papirus-icon-theme papirus-folders nwg-look-bin kvantum-qt5 kvantum qt5ct
 **Fonts:**
 
 ```
-yay -S ttf-ubuntu-font-family noto-fonts-emoji ttf-fira-code otf-font-awesome otf-font-awesome-4 ttf-droid ttf-fantasque-sans-mono ttf-jetbrains-mono ttf-jetbrains-mono-nerd inter-font-beta adobe-source-code-pro-fonts vazirmatn-fonts nerd-fonts
+yay -S ttf-ubuntu-font-family noto-fonts-emoji ttf-fira-code otf-font-awesome otf-font-awesome-4 ttf-droid ttf-fantasque-sans-mono ttf-jetbrains-mono ttf-jetbrains-mono-nerd inter-font-beta adobe-source-code-pro-fonts vazirmatn-fonts vazir-code-fonts nerd-fonts
 ```
 
 [Vazir Code Fonts](https://github.com/rastikerdar/vazir-code-font)
