@@ -64,8 +64,12 @@
 	<command>yad --info --title=&quot;Check sha1 for %n&quot; --text=&quot;$(sha1sum %f)&quot;</command>
 	<description>Check sha1sum</description>
 	<range></range>
-	<patterns>*.iso;*.ISO</patterns>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
 	<other-files/>
+	<text-files/>
+	<video-files/>
 </action>
 <action>
 	<icon>checkbox</icon>
@@ -75,8 +79,12 @@
 	<command>yad --info --title=&quot;Check sha256 for %n&quot; --text=&quot;$(sha256sum %f)&quot;</command>
 	<description>Check sha256sum</description>
 	<range></range>
-	<patterns>*.iso;*.ISO</patterns>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
 	<other-files/>
+	<text-files/>
+	<video-files/>
 </action>
 <action>
 	<icon>checkbox</icon>
@@ -86,8 +94,12 @@
 	<command>yad --info --title=&quot;Check md5 for %n&quot; --text=&quot;$(md5sum %f)&quot;</command>
 	<description>Check md5sum</description>
 	<range></range>
-	<patterns>*.iso;*.ISO;*.tar.gz;*.TAR.GZ;*.zip;*.ZIP</patterns>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
 	<other-files/>
+	<text-files/>
+	<video-files/>
 </action>
 <action>
 	<icon>gtk-convert</icon>
