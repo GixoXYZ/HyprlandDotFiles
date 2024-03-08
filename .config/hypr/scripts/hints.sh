@@ -72,7 +72,9 @@ yad --width=$dynamic_width --height=$dynamic_height \
 " S" "Toggle Split Direction" "(togglesplit)" \
 " O" "Toggle Opaque Mode" "(toggleopaque)" \
 "" "" "" \
-"Alt Tab" "Cycle to Next Window" "(cyclenext)" \
+"Alt Tab" "Switch to Next Window" "(hyprswitch)" \
+"Alt Ctrl Tab" "Switch to Prevoius Window" "(hyprswitch -r)" \
+" Shift Tab" "Cycle to Next Window in Current Workspace" "(cyclenext)" \
 " Left/Right/Up/Down" "Move Focus in Selected direction" "(movefocus)" \
 "" "" "" \
 " Left Mouse Click" "Move Selected Window" "(movewindow)" \
@@ -92,7 +94,7 @@ yad --width=$dynamic_width --height=$dynamic_height \
 " 1-0" "Switch to Workspace 1-10" "(workspace 1-10)" \
 " Mousewheel" "Cycle Through Workspaces" "(workspace r-+1)" \
 " Tab" "Cycle to Next Workspace" "(workspace r+1)" \
-" Shift Tab" "Cycle to Previous Workspace" "(workspace r-1)" \
+" Ctrl Tab" "Cycle to Previous Workspace" "(workspace r-1)" \
 "" "" "" \
 " G" "Toggle Group Mode" "(togglegroup)" \
 " Shift Mousewheel" "Cycle Group Active Window" "(changegroupactive)" \
