@@ -8,6 +8,7 @@
         "idle_inhibitor",
         "hyprland/workspaces",
         "tray",
+        "custom/dict",
         "custom/wallpaper"
     ],
     "modules-center": [
@@ -58,17 +59,24 @@
         "tooltip": false
     },
     "hyprland/workspaces": {
-        "format": "{icon} {name}",
+        "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
-            "active": "󰮯",
-            "default": "󰊠"
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "",
+            "urgent": "",
+            "default": ""
         },
-        "all-outputs": true,
+        "all-outputs": false,
         "sort-by-number": true,
-        "persistent-workspaces": {
-            "*": 5
-        },
         "on-scroll-down": "hyprctl dispatch workspace m+1",
         "on-scroll-up": "hyprctl dispatch workspace m-1"
     },
@@ -282,8 +290,8 @@
         "on-scroll-down": "playerctl previous"
     },
     "custom/dict": {
-        "format": "📔",
-        "on-click": "exec crow-translate"
+        "format": "",
+        "on-click": "exec crow"
     },
     "custom/brightness": {
         "format": "",
