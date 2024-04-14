@@ -57,13 +57,15 @@ window#waybar.hidden {
 #custom-audio_idle_inhibitor,
 #custom-brightness,
 #custom-separator,
-#pulseaudio,
+#pulseaudio.microphone,
 #language,
+#cpu,
+#memory,
+#disk,
 #bluetooth,
 #backlight,
 #battery,
-#custom-hyprshade,
-#memory {
+#custom-hyprshade {
     margin-right: 0;
     margin-left: 0;
     border-radius: 0;
@@ -71,8 +73,7 @@ window#waybar.hidden {
 
 #idle_inhibitor,
 #taskbar,
-#pulseaudio.microphone,
-#cpu {
+#pulseaudio {
     margin-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -80,8 +81,7 @@ window#waybar.hidden {
 
 #custom-swaync,
 #custom-launcher,
-#network,
-#disk {
+#network {
     margin-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -109,8 +109,7 @@ window#waybar.hidden {
 }
 
 #idle_inhibitor,
-#custom-usb,
-#battery {
+#custom-usb {
     color: @color9;
 }
 
@@ -159,6 +158,7 @@ window#waybar.hidden {
 }
 
 #backlight,
+#battery,
 #pulseaudio.microphone,
 #network {
     color: @color13;

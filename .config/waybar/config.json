@@ -8,7 +8,6 @@
         "idle_inhibitor",
         "hyprland/workspaces",
         "tray",
-        "custom/dict",
         "custom/wallpaper"
     ],
     "modules-center": [
@@ -17,17 +16,39 @@
     ],
     "modules-right": [
         "custom/usb",
-        "disk",
-        "memory",
-        "cpu",
         "network",
         "hyprland/language",
-        "custom/brightness",
         "custom/hyprshade",
-        "pulseaudio",
-        "pulseaudio#microphone",
+        "group/hardware",
+        "battery",
+        "group/audio",
         "custom/power-menu"
     ],
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": true,
+        },
+        "modules": [
+            "cpu",
+            "memory",
+            "disk"
+        ]
+    },
+    "group/audio": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "pulseaudio",
+            "pulseaudio#microphone",
+        ]
+    },
     "custom/separator#dot": {
         "format": "",
         "interval": "once",
@@ -151,13 +172,6 @@
         ],
         "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --inc",
         "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec"
-    },
-    "group/audio": {
-        "orientation": "horizontal",
-        "modules": [
-            "pulseaudio",
-            "pulseaudio#microphone",
-        ]
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
