@@ -6,7 +6,6 @@
 # Delayed startups
 sleep 10
 
-nekoray &
 megasync &
 telegram-desktop &
 flatpak run com.discordapp.Discord &
